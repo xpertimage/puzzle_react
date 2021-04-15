@@ -8,7 +8,10 @@ import Header from './components/Header/Header'
 import SignUp from './components/SignUp/SignUp'
 import SignIn from './components/SignIn/SignIn'
 import SignOut from './components/SignOut/SignOut'
+import PuzzleMaker from './components/Puzzle/Puzzle'
+import PuzzleIndex from './components/PuzzleIndex/PuzzleIndex'
 import ChangePassword from './components/ChangePassword/ChangePassword'
+import PuzzleShow from './components/PuzzleShow/PuzzleShow'
 
 class App extends Component {
   constructor (props) {
@@ -62,8 +65,17 @@ class App extends Component {
           <AuthenticatedRoute user={user} path='/sign-out' render={() => (
             <SignOut msgAlert={this.msgAlert} clearUser={this.clearUser} user={user} />
           )} />
+          <AuthenticatedRoute user={user} path='/puzzle' render={() => (
+            <PuzzleMaker msgAlert={this.msgAlert} clearUser={this.clearUser} user={user} />
+          )} />
+          <AuthenticatedRoute user={user} path='/puzzle-index' render={() => (
+            <PuzzleIndex msgAlert={this.msgAlert} clearUser={this.clearUser} user={user} />
+          )} />
           <AuthenticatedRoute user={user} path='/change-password' render={() => (
             <ChangePassword msgAlert={this.msgAlert} user={user} />
+          )} />
+          <AuthenticatedRoute user={user} exact path='/puzzles/:id' render={() => (
+            <PuzzleShow msgAlert={this.msgAlert} user={user} />
           )} />
         </main>
       </Fragment>

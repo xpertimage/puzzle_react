@@ -6,6 +6,8 @@ const authenticatedOptions = (
   <Fragment>
     <Nav.Link href="#change-password">Change Password</Nav.Link>
     <Nav.Link href="#sign-out">Sign Out</Nav.Link>
+    <Nav.Link href="#puzzle">New Puzzle</Nav.Link>
+    <Nav.Link href="#puzzle-index">Show All Puzzles</Nav.Link>
   </Fragment>
 )
 
