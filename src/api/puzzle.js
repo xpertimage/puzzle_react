@@ -33,8 +33,10 @@ export const indexPuzzle = (user) => {
 
 // Destroy a puzzle
 export const deletePuzzle = (id, user) => {
+  console.log('id:', id)
+  console.log('user:', user)
   return axios({
-    url: apiUrl + '/puzzles' + id,
+    url: apiUrl + '/puzzles/' + id,
     method: 'DELETE',
     headers: {
       'Authorization': `Bearer ${user.token}`
@@ -44,7 +46,7 @@ export const deletePuzzle = (id, user) => {
 
 export const updatePuzzle = (id, puzzle, user) => {
   return axios({
-    url: apiUrl + '/puzzles',
+    url: apiUrl + '/puzzles/' + id,
     method: 'PATCH',
     headers: {
       'Authorization': `Bearer ${user.token}`
