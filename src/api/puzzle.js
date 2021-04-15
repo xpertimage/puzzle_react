@@ -33,8 +33,8 @@ export const indexPuzzle = (user) => {
 
 // Destroy a puzzle
 export const deletePuzzle = (id, user) => {
-  console.log('id:', id)
-  console.log('user:', user)
+  // console.log('id:', id)
+  // console.log('user:', user)
   return axios({
     url: apiUrl + '/puzzles/' + id,
     method: 'DELETE',

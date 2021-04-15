@@ -43,7 +43,7 @@ class PuzzleIndex extends Component {
         </Spinner>
       )
     }
-    console.log('puzzles:', puzzles)
+    // console.log('puzzles:', puzzles)
     const puzzlesJsx = puzzles.map(puzzle => (
       // Create a link to each individual movie
       <Link to={`/puzzles/${puzzle._id}`} key={puzzle._id}>

@@ -19,17 +19,16 @@ class PuzzleMaker extends Component {
     }
   }
 
-  handleChange = event => console.log('Event.target: ', event.target)
-  // this.setState({
-  // [event.target.name]: event.target.value
-  // })
+  handleChange = event => this.setState({
+    [event.target.name]: event.target.value
+  })
 
   onPuzzleMaker = event => {
     event.preventDefault()
 
     // const { msgAlert, history, setUser } = this.props
     const { msgAlert, history } = this.props
-    console.log('props.user.token:', this.props.user.token)
+    // console.log('props.user.token:', this.props.user.token)
     createPuzzle(this.state, this.props.user.token)
       // .then(res => setUser(res.data.user))
       .then(() => msgAlert({
