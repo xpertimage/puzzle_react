@@ -9,18 +9,23 @@ class PuzzleShow extends Component {
   constructor (props) {
     super(props)
     this.state = {
-      puzzle: {
-        name: '',
-        puzzle: '',
-        target: '',
-        solution: ''
-      }
+      name: '',
+      puzzle: '',
+      target: '',
+      solution: '',
+      id: ''
     }
   }
   componentDidMount () {
     const { user, msgAlert, match } = this.props
     puzzleShow(match.params.id, user)
-      .then(res => this.setState({ puzzle: res.data.puzzle }))
+      .then(res => this.setState({
+        name: res.data.puzzle.name,
+        puzzle: res.data.puzzle.puzzle,
+        target: res.data.puzzle.target,
+        solution: res.data.puzzle.solution,
+        id: res.data.puzzle._id
+      }))
       .then(() => msgAlert({
         heading: 'Loaded Puzzle Successfully',
         message: 'The puzzle is now displayed.',
@@ -40,7 +45,7 @@ class PuzzleShow extends Component {
 
     const { msgAlert, history } = this.props
 
-    deletePuzzle(this.state.puzzle._id, this.props.user)
+    deletePuzzle(this.state.id, this.props.user)
       // .then(res => setUser(res.data.user))
       .then(() => msgAlert({
         heading: 'Delete',
@@ -62,10 +67,7 @@ class PuzzleShow extends Component {
     event.preventDefault()
 
     const { msgAlert, history } = this.props
-    console.log('this.props.user: ', this.props.user)
-    console.log('This.state.puzzle._id: ', this.state.puzzle._id)
-    console.log('This.state.puzzle : ', this.state.puzzle)
-    updatePuzzle(this.state.puzzle._id, this.state.puzzle, this.props.user)
+    updatePuzzle(this.state.id, this.state, this.props.user)
       // .then(res => setUser(res.data.user))
       .then(() => msgAlert({
         heading: 'Update',
@@ -87,8 +89,12 @@ class PuzzleShow extends Component {
     [event.target.name]: event.target.value
   })
 
+  handleNameChange = event => this.setState({
+    name: event.target.value
+  })
+
   render () {
-    const { puzzle } = this.state
+    const { name, puzzle, target, solution } = this.state
     if (!puzzle) {
       return (
         <Spinner variant='primary' animation="border" role="status">
@@ -104,19 +110,20 @@ class PuzzleShow extends Component {
             <Form.Group controlId="name">
               <Form.Label>Puzzle Name</Form.Label>
               <Form.Control
-                required
                 type="text"
-                name="name"
-                value={puzzle.name}
-                onChange={this.handleChange}
+                value={name}
+                name="puzzle.name"
+                placeholder="Puzzle Name"
+                onChange={this.handleNameChange}
               />
             </Form.Group>
             <Form.Group controlId="puzzle">
               <Form.Label>Puzzle</Form.Label>
               <Form.Control
                 required
-                name="puzzle"
-                value={puzzle.puzzle}
+                name="puzzle.puzzle"
+                value={puzzle}
+                placeholder="Puzzle"
                 type="text"
                 onChange={this.handleChange}
               />
@@ -126,7 +133,8 @@ class PuzzleShow extends Component {
               <Form.Control
                 required
                 name="target"
-                value={puzzle.target}
+                value={target}
+                placeholder="Target Number"
                 type="text"
                 onChange={this.handleChange}
               />
@@ -136,7 +144,8 @@ class PuzzleShow extends Component {
               <Form.Control
                 required
                 name="solution"
-                value={puzzle.solution}
+                value={solution}
+                placeholder="Solution"
                 type="text"
                 onChange={this.handleChange}
               />

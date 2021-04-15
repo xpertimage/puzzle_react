@@ -19,9 +19,10 @@ class PuzzleMaker extends Component {
     }
   }
 
-  handleChange = event => this.setState({
-    [event.target.name]: event.target.value
-  })
+  handleChange = event => console.log('Event.target: ', event.target)
+  // this.setState({
+  // [event.target.name]: event.target.value
+  // })
 
   onPuzzleMaker = event => {
     event.preventDefault()
