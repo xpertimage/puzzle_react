@@ -2,8 +2,7 @@
 Description:
 Puzzle Maker is a simple application designed for elementary school math teachers to help teach students basic integer arithmetic consisting of addition, subtraction, multiplication and division. PuzzleMaker allows an authenticated user to create a "puzzle" that consists of 3 single digit integers from 1-9 then supply a "Target" number. For example the puzzle could be 3,7,9 and the target could be 1. The challenge is for the student to create math equation using the 3 numbers provided that will equal the target number. In our example the soultion would be 3+7-9=1. The solution could also include parentheses to indicate that the math operation inside of the parentheses should be completed first.
 
-![](https://github.com/xpertimage/puzzle_react/blob/main/public/PuzzleMaker.png)
-
+![](./public/PuzzleMaker.png)
 
 Puzzles can be given a name and stored in a database. All of the puzzles can be shown to the user and each puzzle can be updated or deleted.
 
@@ -51,17 +50,28 @@ I then moved to the client side and took each step as follows: 1. Create the aut
 
 ### User Stories:
 As a user I would like to be able to sign up to use the app.
+
 As a user I would like to be able to sign in to use the app.
+
 As a user I would like to be able to sign out of the app.
+
 As a user I would like to be able to change my password.
+
 As a user I would like to be able to create a new puzzle.
+
 As a user I would like to see all of the puzzles I created.
+
 As a user I would like to be able to delete one of my puzzles.
+
 As a user I would like to be able to edit one of my puzzles.
 
+
 ### Wireframes:
-![](https://github.com/xpertimage/puzzle_react/blob/main/public/Home.png)
-![](https://github.com/xpertimage/puzzle_react/blob/main/public/Signed-in.png)
-![](https://github.com/xpertimage/puzzle_react/blob/main/public/Show-Puzzles)
+![](./public/Wireframe1.jpg)
 
+![](./public/Wireframe2.jpg)
 
+![](./public/Wireframe3.jpg)
+
+### Entity Relationship Diagram:
+![](./public/ERD.jpg)
