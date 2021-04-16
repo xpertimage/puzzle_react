@@ -60,6 +60,4 @@ As a user I would like to be able to delete one of my puzzles.
 As a user I would like to be able to edit one of my puzzles.
 
 ### Wireframes:
-![Wireframes](https://github.com/xpertimage/puzzle_react/tree/main/public/Home.png)
-![Wireframes](https://github.com/xpertimage/puzzle_react/tree/main/public/Signed-in.png)
-![Wireframes](https://github.com/xpertimage/puzzle_react/tree/main/public/Show-Puzzles.png)
+![](https://github.com/xpertimage/puzzle_react/blob/main/public/Home.png)
