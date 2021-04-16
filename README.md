@@ -61,3 +61,7 @@ As a user I would like to be able to edit one of my puzzles.
 
 ### Wireframes:
 ![](https://github.com/xpertimage/puzzle_react/blob/main/public/Home.png)
+![](https://github.com/xpertimage/puzzle_react/blob/main/public/Signed-in.png)
+![](https://github.com/xpertimage/puzzle_react/blob/main/public/Show-Puzzles)
+
+
