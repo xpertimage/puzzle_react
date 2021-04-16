@@ -7,7 +7,7 @@ Puzzle Maker is a simple application designed for elementary school math teacher
 Puzzles can be given a name and stored in a database. All of the puzzles can be shown to the user and each puzzle can be updated or deleted.
 
 ### Client:
-Puzzle Maker is a client-server web application with the client hosted on GitHub.com. The client app is located here and the client repo is here https://github.com/xpertimage/puzzle_react . There is also a MongoDB server where user information and puzzles can be stored. The Puzzle Maker client was created using:
+Puzzle Maker is a client-server web application with the client hosted on GitHub.com. The client app is located here https://xpertimage.github.io/puzzle_react/ and the client repo is here https://github.com/xpertimage/puzzle_react . There is also a MongoDB server where user information and puzzles can be stored. The Puzzle Maker client was created using:
 Reactjs
 BootStrap
 Axios
