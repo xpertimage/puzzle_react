@@ -2,7 +2,7 @@
 Description:
 Puzzle Maker is a simple application designed for elementary school math teachers to help teach students basic integer arithmetic consisting of addition, subtraction, multiplication and division. PuzzleMaker allows an authenticated user to create a "puzzle" that consists of 3 single digit integers from 1-9 then supply a "Target" number. For example the puzzle could be 3,7,9 and the target could be 1. The challenge is for the student to create math equation using the 3 numbers provided that will equal the target number. In our example the soultion would be 3+7-9=1. The solution could also include parentheses to indicate that the math operation inside of the parentheses should be completed first.
 
-!https://github.com/xpertimage/puzzle_react/tree/main/public/PuzzleMaker.png
+https://github.com/xpertimage/puzzle_react/tree/main/public/PuzzleMaker.png
 
 Puzzles can be given a name and stored in a database. All of the puzzles can be shown to the user and each puzzle can be updated or deleted.
 
