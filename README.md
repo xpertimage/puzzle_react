@@ -66,9 +66,12 @@ As a user I would like to be able to delete one of my puzzles.
 As a user I would like to be able to edit one of my puzzles.
 
 ### Wireframes:
+
 ![](./public/Wireframe1.jpg)
 
+
 ![](./public/Wireframe2.jpg)
+
 
 ![](./public/Wireframe3.jpg)
 
