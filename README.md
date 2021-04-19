@@ -14,7 +14,7 @@ Axios
 Javascript
 
 ### Server:
-The Puzzle Maker server is a NodeJS Express server. The Puzzle Maker server / API repo is located here https://github.com/xpertimage/puzzle_api and the server / API is hosted on Heroku.com at this link.
+The Puzzle Maker server is a NodeJS Express server. The Puzzle Maker server / API repo is located here https://github.com/xpertimage/puzzle_api and the server / API is hosted on Heroku.com at this link  https://puzzleapi.herokuapp.com/.
 Server Technologies include:
 nodejs
 Express
